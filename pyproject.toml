@@ -5,7 +5,7 @@ description = "A private moving planner that turns belongings into a packing tim
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "Haider" }]
-license = { text = "MIT" }
+license = "MIT"
 keywords = ["moving", "packing", "planner", "home", "local-first"]
 
 [project.scripts]
@@ -18,3 +18,5 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools]
 packages = ["app"]
 
+[tool.setuptools.package-data]
+app = ["static/*.html", "static/*.css", "static/*.js", "data/*.csv"]

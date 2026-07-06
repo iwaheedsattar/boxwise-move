@@ -20,7 +20,7 @@ class BoxwiseHandler(BaseHTTPRequestHandler):
             self._send_file(STATIC / "index.html", "text/html; charset=utf-8")
             return
         if path == "/sample":
-            self._send_file(ROOT.parent / "examples" / "starter-items.csv", "text/plain; charset=utf-8")
+            self._send_file(ROOT / "data" / "starter-items.csv", "text/plain; charset=utf-8")
             return
         if path.startswith("/static/"):
             target = STATIC / path.removeprefix("/static/")
@@ -99,4 +99,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
