@@ -1,0 +1,20 @@
+[project]
+name = "boxwise-move"
+version = "1.0.0"
+description = "A private moving planner that turns belongings into a packing timeline, labels, and first-night plan."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Haider" }]
+license = { text = "MIT" }
+keywords = ["moving", "packing", "planner", "home", "local-first"]
+
+[project.scripts]
+boxwise-move = "app.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["app"]
+

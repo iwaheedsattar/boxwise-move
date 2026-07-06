@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boxwise Move</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Local moving planner</p>
+            <h1>Boxwise Move</h1>
+          </div>
+          <button id="loadSample" class="ghost-button" type="button">Load sample</button>
+        </header>
+
+        <section class="input-grid">
+          <label>
+            Move date
+            <input id="moveDate" type="date" />
+          </label>
+          <label>
+            Home size
+            <select id="homeSize">
+              <option>Studio</option>
+              <option>1 bedroom</option>
+              <option selected>2 bedroom</option>
+              <option>3 bedroom</option>
+              <option>4 bedroom</option>
+            </select>
+          </label>
+        </section>
+
+        <label class="items-label">
+          Belongings CSV
+          <textarea id="items" spellcheck="false" placeholder="item,room,quantity,frequency,sentiment,notes"></textarea>
+        </label>
+
+        <div class="actions">
+          <button id="planButton" type="button">Build move plan</button>
+          <button id="copyMarkdown" class="secondary-button" type="button">Copy Markdown</button>
+        </div>
+      </section>
+
+      <section class="results">
+        <div class="hero-panel">
+          <p class="eyebrow">Packing order</p>
+          <h2 id="moveClock">Ready when you are</h2>
+          <p id="coachLine">Paste belongings or load the sample to create labels, supply estimates, and a first-night kit.</p>
+        </div>
+
+        <div class="summary-grid" id="summaryGrid"></div>
+
+        <section class="section-block">
+          <div class="section-head">
+            <h3>Timeline</h3>
+          </div>
+          <div id="timeline" class="timeline"></div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-head">
+            <h3>Pack List</h3>
+            <span id="itemCount"></span>
+          </div>
+          <div id="itemsTable" class="items-table"></div>
+        </section>
+
+        <section class="bottom-grid">
+          <div>
+            <h3>First-Night Kit</h3>
+            <ul id="firstNight"></ul>
+          </div>
+          <div>
+            <h3>Supplies</h3>
+            <ul id="supplies"></ul>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
+

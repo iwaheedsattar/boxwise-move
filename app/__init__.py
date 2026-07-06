@@ -1,0 +1,2 @@
+"""Boxwise Move application package."""
+
